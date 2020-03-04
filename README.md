@@ -1,1 +1,1 @@
-# BOJ
+# [Baekjoon online Judge](https://www.acmicpc.net/)
