@@ -19,13 +19,6 @@ def goodword(word):
         return True
     else:
         return False
-    
-result = 0
-for i in range(int(input())):
-    if goodword(input()):
-        result += 1
-
-print(result)
 
 # In[2]:
     
@@ -43,6 +36,8 @@ def goodword(word):
         
     return True
 
+# In[3]:
+    
 result = 0
 for i in range(int(input())):
     if goodword(input()):
