@@ -1,11 +1,18 @@
-def solution(n, lost, reserve): 
-    set_lost = set(lost) - set(reserve)
-    set_reserve = set(reserve) - set(lost)
+def solution(number, k):
+    number = list(number)
+    answer = [number.pop(0)]
+
+    for elem in number:
+        while answer and elem > answer[-1] and k > 0:
+            answer.pop()
+            k -= 1
+
+        answer.append(elem)
+
+    while k > 0:
+        answer.pop()
+        k -= 1
+
+    answer = "".join(answer)
     
-    for student in set_reserve:
-        if student - 1 in set_lost:
-            set_lost.remove(student - 1)
-        elif student + 1 in set_lost:
-            set_lost.remove(student + 1)
-            
-    return n - len(set_lost)
+    return answer
